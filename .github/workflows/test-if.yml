@@ -13,46 +13,46 @@ jobs:
         if: >
           github.actor == 'dumptruckman' &&
           (github.event_name == 'push' ||
-          github.event_name == 'workflow_dispatch)
+          github.event_name == 'workflow_dispatch')
         run: echo hello
       - name: Skips no matter `>`
         if: >
           github.actor == 'dumptruckman' &&
           (github.event_name == 'push' ||
-          github.event_name == 'workflow_dispatch)
+          github.event_name == 'workflow_dispatch')
         run: echo hello
       - name: ... or `>-`
         if: >
           github.actor == 'dumptruckman' &&
           (github.event_name == 'push' ||
-          github.event_name == 'workflow_dispatch)
+          github.event_name == 'workflow_dispatch')
         run: echo hello
       - name: ... or `|`
         if: |
           github.actor == 'dumptruckman' &&
           (github.event_name == 'push' ||
-          github.event_name == 'workflow_dispatch)
+          github.event_name == 'workflow_dispatch')
         run: echo hello
       - name: Always true if not trim
         if: >
           ${{
             github.actor == 'dumptruckman' &&
             (github.event_name == 'push' ||
-            github.event_name == 'workflow_dispatch)
+            github.event_name == 'workflow_dispatch')
           }}
         run: echo hello
       - name: Because end with `}}` works
-        if: ${{ github.actor == 'dumptruckman' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch) }}
+        if: ${{ github.actor == 'dumptruckman' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch') }}
         run: echo hello
       - name: ... but not will not
-        if: "${{ github.actor == 'dumptruckman' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch) }} "
+        if: "${{ github.actor == 'dumptruckman' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch') }} "
         run: echo hello
       - name: Trim will skip
         if: >-
           ${{
             github.actor == 'dumptruckman' &&
             (github.event_name == 'push' ||
-            github.event_name == 'workflow_dispatch)
+            github.event_name == 'workflow_dispatch')
           }}
         run: echo hello
       - name: Even in literal mode
@@ -60,6 +60,6 @@ jobs:
           ${{
             github.actor == 'dumptruckman' &&
             (github.event_name == 'push' ||
-            github.event_name == 'workflow_dispatch)
+            github.event_name == 'workflow_dispatch')
           }}
         run: echo hello
